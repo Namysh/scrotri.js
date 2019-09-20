@@ -22,7 +22,7 @@ scrotri(false).init;
 ```
 Now, for selecting the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
 ```html
-<h1 class="SCTR-init" data-sctr="my-animation">AnimateCSS Animation</h1>
+<h1 class="SCTR-init" data-sctr="my-animation">Hello</h1>
 
 ```
 The "data-sctr" attribute refers to the custom animation you made and put in the CSS file :
