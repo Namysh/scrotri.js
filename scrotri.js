@@ -1,6 +1,6 @@
 function scrotri(importAnimateCSS=false) {     
     return { init : (()=> {
-        // On récupère tous les éléments concernés par le framework
+        // On récupère tous les éléments concernés par la librarie
         var elementArray = document.getElementsByClassName("SCTR-init");
         var windowHeight = window.innerHeight;
         // Si on importe animateCSS
