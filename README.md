@@ -10,7 +10,7 @@ as you can see, an animation is triggered when you scroll down
 ## Usage
 First, you need to know if you want to use custom animations or you want to animate.css library.
 
-If you want to use custom animations you just have to donwload the CSS and the JS files and import them.
+If you want to use custom animations you just have to download the CSS and the JS files and import them.
 ```html
 <script  type="text/javascript"  src="scrotri.js"></script>
 <link  rel="stylesheet"  href="scrotri.css">
@@ -20,12 +20,12 @@ Afterward you have to init Scrotri like this :
 // pass false is you don't want to import animate.css
 scrotri(false).init;
 ```
-Now, for selecting the elements you want to animate you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
+Now, for selecting the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
 ```html
 <h1 class="SCTR-init" data-sctr="my-animation">AnimateCSS Animation</h1>
 
 ```
-The "data-sctr" attribute refers to the custom animatio you made and put in the CSS file :
+The "data-sctr" attribute refers to the custom animation you made and put in the CSS file :
 ```CSS
 .my-animation {
   animation: my-animation 1.4s;
