@@ -43,7 +43,7 @@ The "data-sctr" attribute refers to the custom animation you made and put in the
 If you want to use animate.css you have to pass "true" like this :
 
 ```javascript
-// pass false is you don't want to import animate.css
+// pass true is you want to use animate.css
 scrotri(true).init;
 ```
 
