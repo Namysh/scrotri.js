@@ -15,7 +15,7 @@ If you want to use custom animations you just have to download the CSS and the J
 <script  type="text/javascript"  src="scrotri.js"></script>
 <link  rel="stylesheet"  href="scrotri.css">
 ```
-Afterward you have to init Scrotri like this :
+Afterward you have to init Scrotri like this (between <script> tag for example) :
 ```javascript
 // pass false is you don't want to import animate.css
 scrotri(false).init;
