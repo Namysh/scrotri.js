@@ -40,4 +40,17 @@ The "data-sctr" attribute refers to the custom animation you made and put in the
   }
 }
 ```
+If you want to use animate.css you have to pass "true" like this :
 
+```javascript
+// pass false is you don't want to import animate.css
+scrotri(true).init;
+```
+
+Now, for selecting the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
+```html
+<h1 class="SCTR-init" data-sctr="bounceIn">Hello</h1>
+
+```
+
+The "data-sctr" attribute refers to the animate.css animations that you want to use. You can find as list of their animations on their github
