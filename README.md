@@ -9,6 +9,7 @@ as you can see, an animation is triggered when you scroll down
 
 ## Usage
 First, you need to know if you want to use custom animations or you want to animate.css library.
+
 If you want to use custom animations you just have to donwload the CSS and the JS files and import them.
 ```html
 <script  type="text/javascript"  src="scrotri.js"></script>
