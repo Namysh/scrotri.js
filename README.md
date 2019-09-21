@@ -17,7 +17,7 @@ If you want to use custom animations you just have to download the CSS and the J
 ```
 Afterward you have to init Scrotri like this (between <script> tag for example) :
 ```javascript
-// pass false is you don't want to import animate.css
+// pass false if you don't want to import animate.css
 scrotri(false).init;
 ```
 Now, for selecting the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
@@ -43,7 +43,7 @@ The "data-sctr" attribute refers to the custom animation you made and put in the
 If you want to use animate.css you have to pass "true" like this :
 
 ```javascript
-// pass true is you want to use animate.css
+// pass true if you want to use animate.css
 scrotri(true).init;
 ```
 
