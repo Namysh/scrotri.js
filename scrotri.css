@@ -18,15 +18,13 @@
 }
 
 .SCTR-fade-in {
-  -webkit-animation: SCTR-fade-in 1.4s;
-          animation: SCTR-fade-in 1.4s;
+  animation: SCTR-fade-in 1.4s;
 }
 
 @keyframes SCTR-fade-in {
   from {
     opacity: 0;
-    -webkit-transform: scale(0.7, 0.7);
-            transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
   }
   to {
     opacity: 1;
