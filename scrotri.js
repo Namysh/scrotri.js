@@ -1,22 +1,21 @@
-function scrotri(importAnimateCSS = false) {
-    const elements = document.getElementsByClassName('SCTR-init');
+function Scrotri(options = {}) {
+    const elements = document.querySelectorAll('.SCTR-init');
     const windowHeight = window.innerHeight;
 
-    if (importAnimateCSS) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-        document.getElementsByTagName('HEAD')[0].appendChild(link);
-    }
+    options.useAnimateCSS &&
+        document.head.insertAdjacentHTML(
+            'beforeend',
+            '<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>'
+        );
 
     window.addEventListener('scroll', function awaitingAnimation() {
-        [...elements].forEach((elem) => {
-            const posFromTop = elem.getBoundingClientRect().top;
-            if (posFromTop - windowHeight <= 0) {
-                const animation_name = elem.dataset.sctr || 'undefined';
-                elem.className = elem.className.replace('SCTR-init', 'animated ' + animation_name);
-            }
-        })
+        [...elements].forEach((element) => {
+            const posFromTop = element.getBoundingClientRect().top;
+            if (posFromTop - windowHeight <= 0)
+                element.className = element.className.replace(
+                    'SCTR-init',
+                    'animated ' + element.dataset.sctr || 'undefined'
+                );
+        });
     });
 }
