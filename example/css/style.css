@@ -1,41 +1,75 @@
-body{
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.SCTR-test {
+    animation: SCTR-test 1.4s;
 }
+
+@keyframes SCTR-test {
+    from {
+        opacity: 0;
+        transform: translateX(-9999px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.SCTR-fade-in {
+    animation: SCTR-fade-in 1.4s;
+}
+
+@keyframes SCTR-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.7, 0.7);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+div h2 {
+    color: white;
+    font-size: 35px;
+    margin: 0;
+}
+
+div span {
+    color: white;
+    font-size: 25px;
+}
+
 .full-screen {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#page1{
-  background-color: #2ecc71;
+#page1 {
+    background-color: #2ecc71;
 }
-#page2{
-  background-color: #3498db;
-  
+#page2 {
+    background-color: #3498db;
 }
-#page3{
-  background-color: #9b59b6;
-  
+#page3 {
+    background-color: #9b59b6;
 }
-#page4{
-  background-color: #34495e;
-  
+#page4 {
+    background-color: #34495e;
 }
-#page5{
-  background-color: #e74c3c;
-  
-}
-
-h1{
-  color: white;
-  font-size: 35px;
-}
-
-h2{
-  color: white;
-  font-size: 35px;
-  padding: 5px;
+#page5 {
+    background-color: #e74c3c;
 }

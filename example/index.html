@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Scrotri.js</title>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Scrotri.js</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../scrotri.css">
+        <link rel="stylesheet" href="css/style.css" />
 
-    <script type="text/javascript" src="../scrotri.js"></script>
-</head>
-<body>
-    <div class="full-screen" id="page1">
-      
-       <h1>Scroll down and let's see the animations</h1>
-       
-    </div>
+        <script type="text/javascript" src="../scrotri.js"></script>
+    </head>
+    <body>
+        <div class="full-screen" id="page1">
+            <h2>Scroll down and let's see the animations</h2>
+        </div>
 
-    <div class="full-screen" id="page2">
+        <div class="full-screen" id="page2">
+            <h2 data-sctr="SCTR-fade-in">Custom fade-in animation</h2>
+            <img src="./img/example1.png" alt="" />
+        </div>
 
-      <h2 class="SCTR-init" data-sctr="SCTR-fade-in">Custom Animation</h2>
-       
-    </div>
-     
-      <div class="full-screen" id="page3">
-        
-        <h2 class="SCTR-init" data-sctr="SCTR-test">Custom Animation</h2>
-        
-      </div>
-       
-      <div class="full-screen" id="page4">
-        
-        <h2 class="SCTR-init" data-sctr="rollIn">AnimateCSS Animation</h2>
-        
-      </div>
-      <div class="full-screen" id="page5">
-      
-        <h2 class="SCTR-init" data-sctr="shake">AnimateCSS Animation</h2>
-        <h2 class="SCTR-init" data-sctr="rotateIn">AnimateCSS Animation2</h2>
-        <h2 class="SCTR-init" data-sctr="lightSpeedIn">AnimateCSS Animation</h2>
+        <div class="full-screen" id="page3">
+            <h2 data-sctr="SCTR-test">Custom test animation</h2>
+            <img src="./img/example2.png" alt="" />
+        </div>
 
-          
-      </div>
+        <div class="full-screen" id="page5">
+            <h2 data-sctr="shake">AnimateCSS shake animation</h2>
+            <h2 data-sctr="rotateIn">AnimateCSS rotateIn animation2</h2>
+            <h2 data-sctr="lightSpeedIn">AnimateCSS lightSpeedIn animation</h2>
+            <img src="./img/example3.png" alt="" />
+        </div>
 
-      <script type="text/javascript">
-        Scrotri({useAnimateCSS: true});
-      </script>
-</body>
+        <div class="full-screen" id="page4">
+            <h2 data-sctr="rollIn" data-sctr-once="true">
+                AnimateCSS rollIn animation
+            </h2>
+            <span>with once parameter</span>
+            <img src="./img/example4.png" alt="" />
+        </div>
+
+        <script type="text/javascript">
+            Scrotri({ useAnimateCSS: true });
+        </script>
+    </body>
 </html>
