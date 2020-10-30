@@ -1,81 +1,81 @@
 # Scrotri.js
-
-I made a library like AOS in order to train myself in javascript.
+I made a minimalist AOS like library in order to train myself in javascript.
 
 [You can see an example here](https://namysh.github.io/scrotri.js/example/)
 
-as you can see, an animation is triggered when you scroll down
-
-
 ## Usage
-First, you need to know if you want to use custom animations or you want to animate.css library.
-> you can use both custom animations and animate.css library
-
-Either way, you have to download the CSS and the JS files and import them in the HEAD like this :
+Download javascript file and import it in the `head` tag :
 ```html
 <head>
     <!-- ... -->
     <script  type="text/javascript"  src="scrotri.js"></script>
-    <link  rel="stylesheet"  href="scrotri.css">
 </head>
 ```
 
-### Use custom animations
-In order to exclusivly use custom animations you have to init Scrotri like this (between <script> tag for example) :
+Then init Scrotri in `script` tag :
 ```html
 <body>
     <!-- ... -->
     <script type="text/javascript">
-        // set 'useAnimateCss' to false if you don't want to import animate.css
-        Scrotri({useAnimateCSS: false});
+        Scrotri();
     </script>
 </body>
 ```
 
-Now, with regard to select the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
+Now in order to select the elements you want to animate, you have to add the "`data-sctr`" attribute, referring the animation's name like this :
 ```html
 <body>
     <!-- ... -->
-    <h1 class="SCTR-init" data-sctr="my-animation">Hello</h1>
+    <!-- will trigger "myAnimation" custom animation on scroll -->
+    <h1 data-sctr="myAnimation">Hello</h1>
     <!-- ... -->
 </body>
 ```
 
-The "data-sctr" attribute refers to the custom animation's name you made and put in the CSS file :
-```css
-.my-animation {
-  animation: my-animation 1.4s;
-}
-
-@keyframes my-animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-```
-
-### Use animate.css library
-If you want to use the animate.css library you have to set 'useAnimateCss' to true like this :
+### Initialization related parameters
+`useAnimateCss` : if true, will include the animate.css library
 ```html
 <body>
     <!-- ... -->
     <script type="text/javascript">
-        // set 'useAnimateCSS' to true if you want to use animate.css
-        Scrotri({useAnimateCSS: true});
+        Scrotri({
+            useAnimateCss: true,
+        });
     </script>
 </body>
 ```
 
-Now, for selecting the elements you want to animate, you have to add them the "SCTR-init" class and the "data-sctr" attribute like this :
+### Elements related parameters
+`data-sctr` : the name of the animation
+`data-sctr-once` : if true, will trigger animation only once
 ```html
 <body>
     <!-- ... -->
-    <h1 class="SCTR-init" data-sctr="bounceIn">Hello</h1>
+    <h1 
+        data-sctr="myAnimation"
+        data-sctr-once="true" 
+    >
+    </h1>
     <!-- ... -->
 </body>
 ```
 
-The "data-sctr" attribute refers to the animate.css animations that you want to use. You can find as list of their animations on their github
+## Example
+### Using animate.css library
+```html
+<html>
+    <head>
+        <!-- ... -->
+        <script  type="text/javascript"  src="scrotri.js"></script>
+    </head>
+    <body>
+        <!-- ... -->
+        <h1 data-sctr="bounceIn">I'll bounce in</h1>
+        <script type="text/javascript">
+            Scrotri({useAnimateCSS: true});
+        </script>
+    </body>
+</html>
+```
+
+Here the "`data-sctr`" attribute will also consider animate.css's animations. You can find as list of their animations on their github page
